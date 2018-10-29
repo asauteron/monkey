@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vara>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <name>VARA.DEMO_GRID7A.ALL</name>
+         <type>VARA</type>
+         <sub_type>STATIC</sub_type>
+         <versioning_id>-639581972</versioning_id>
+      </row>
+   </general_attributes>
+   <variable_definitions>
+      <row>
+         <column_count>5</column_count>
+         <on_not_found>I</on_not_found>
+         <sort_column>2</sort_column>
+         <sort_order>0</sort_order>
+         <type>STATIC</type>
+         <data_type>C</data_type>
+         <validity_range>FREI</validity_range>
+      </row>
+   </variable_definitions>
+   <static_values>
+      <row>
+         <client>1980</client>
+         <value1>DISABLED</value1>
+         <value2>01</value2>
+         <validity_range>FREI</validity_range>
+         <key>File Segregation Load</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>02</value2>
+         <validity_range>FREI</validity_range>
+         <key>Segregation-0</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>03</value2>
+         <validity_range>FREI</validity_range>
+         <key>Segregation-1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>04</value2>
+         <validity_range>FREI</validity_range>
+         <key>Segregation-2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>05</value2>
+         <validity_range>FREI</validity_range>
+         <key>Segregation-3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>06</value2>
+         <validity_range>FREI</validity_range>
+         <key>Segregation-4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>07</value2>
+         <validity_range>FREI</validity_range>
+         <key>Segregation-5</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>DISABLED</value1>
+         <value2>08</value2>
+         <validity_range>FREI</validity_range>
+         <key>WE Renaming - Load</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>09</value2>
+         <validity_range>FREI</validity_range>
+         <key>REN WE WORK-0</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>10</value2>
+         <validity_range>FREI</validity_range>
+         <key>REN WE WORK-1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Description : GK POS Inbound Load WE</value1>
+         <value2>100</value2>
+         <validity_range>FREI</validity_range>
+         <key>Global system</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Status OK</value1>
+         <value2>101</value2>
+         <validity_range>FREI</validity_range>
+         <key>Global status</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Num of processed files : 56</value1>
+         <value2>102</value2>
+         <validity_range>FREI</validity_range>
+         <key>Global numof</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Dashboard Refreshed at 7-Jun-2018 9:30:16 CET</value1>
+         <value2>103</value2>
+         <validity_range>FREI</validity_range>
+         <key>Global date</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>11</value2>
+         <validity_range>FREI</validity_range>
+         <key>REN WE WORK-2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>12</value2>
+         <validity_range>FREI</validity_range>
+         <key>REN WE WORK-3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>13</value2>
+         <validity_range>FREI</validity_range>
+         <key>REN WE WORK-4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>14</value2>
+         <validity_range>FREI</validity_range>
+         <key>REN WE WORK-5</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>DISABLED</value1>
+         <value2>15</value2>
+         <validity_range>FREI</validity_range>
+         <key>WE Transfer. Load</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>16</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer. WE-0</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>17</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer. WE-1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>18</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer. WE-2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>19</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer. WE-3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>20</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer. WE-4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>21</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer. WE-5</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1><![CDATA[<== see WE Transfer. Load ]]></value1>
+         <value2>22</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer WE</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>23</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer WE WORK-0</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>24</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer WE WORK-1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>25</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer WE WORK-2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>26</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer WE WORK-3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>27</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer WE WORK-4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <value2>28</value2>
+         <validity_range>FREI</validity_range>
+         <key>Transfer WE WORK-5</key>
+      </row>
+   </static_values>
+</vara>

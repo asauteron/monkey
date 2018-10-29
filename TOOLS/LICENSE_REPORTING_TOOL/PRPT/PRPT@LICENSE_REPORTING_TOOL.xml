@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prpt>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <max_parallel_action>1</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>PRPT@LICENSE_REPORTING_TOOL</name>
+         <type>PRPT</type>
+         <queue>CLIENT_QUEUE</queue>
+         <versioning_id>1264622346</versioning_id>
+      </row>
+   </general_attributes>
+   <gui_description>
+      <row>
+         <xui><![CDATA[<dialog height="506" icon="PRPT" id="PRPTS" left="279" top="4" width="420"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="License Reporting Tool"><properties><entry name="text">License Reporting Tool</entry><entry name="modifiable">0</entry></properties></readpanel></dialog>]]></xui>
+      </row>
+   </gui_description>
+   <elements>
+      <row>
+         <line_number>1</line_number>
+         <name>LABEL1#</name>
+         <value>Report types</value>
+         <xui><![CDATA[<label fill="b" id="LABEL1s.00" nl="1" text="Report types" tooltip="" alt="0"><properties><entry name="id">LABEL1s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text">Report types</entry></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+      <row>
+         <line_number>5</line_number>
+         <name>LABEL4#</name>
+         <xui><![CDATA[<label fill="b" id="LABEL4s.00" nl="1" text="" tooltip="" alt="0"><properties><entry name="id">LABEL4s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text"/></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+      <row>
+         <line_number>6</line_number>
+         <name>LABEL3#</name>
+         <xui><![CDATA[<label fill="b" id="LABEL3s.00" nl="1" text="" tooltip="" alt="0"><properties><entry name="id">LABEL3s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text"/></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+      <row>
+         <line_number>7</line_number>
+         <name>LABEL2#</name>
+         <value>Time frame</value>
+         <xui><![CDATA[<label fill="b" id="LABEL2s.00" nl="1" text="Time frame" tooltip="" alt="0"><properties><entry name="id">LABEL2s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text">Time frame</entry></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+      <row>
+         <line_number>8</line_number>
+         <name>START#</name>
+         <reference>UC_DATATYPE_DATE</reference>
+         <reference_type>VARA</reference_type>
+         <value>2018-07-17</value>
+         <xui><![CDATA[<datefield enabled="1" fill="b" focus="0" id="STARTs.00" max="" min="" nl="1" text="Start date" tooltip="" alt="1" strict="1"><properties><entry listparam="D" name="reference" reftype="STATIC">UC_DATATYPE_DATE</entry><entry name="calendar"/><entry name="key"/><entry name="doutputformat"/><entry name="text">Start date</entry><entry alias="min" name="dmin"/><entry alias="max" name="dmax"/><entry name="id">STARTs.00</entry><entry name="enabled">0</entry><entry name="focus">0</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="initvalue">2018-07-18</entry></properties></datefield>]]></xui>
+         <ui_type>datefield</ui_type>
+      </row>
+      <row>
+         <line_number>9</line_number>
+         <name>END#</name>
+         <reference>UC_DATATYPE_DATE</reference>
+         <reference_type>VARA</reference_type>
+         <value>2018-07-17</value>
+         <xui><![CDATA[<datefield enabled="1" fill="b" focus="0" id="ENDs.00" max="" min="" nl="1" text="End date" tooltip="" alt="1" strict="1"><properties><entry listparam="D" name="reference" reftype="STATIC">UC_DATATYPE_DATE</entry><entry name="calendar"/><entry name="key"/><entry name="doutputformat"/><entry name="text">End date</entry><entry alias="min" name="dmin"/><entry alias="max" name="dmax"/><entry name="id">ENDs.00</entry><entry name="enabled">0</entry><entry name="focus">0</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="initvalue">2018-07-18</entry></properties></datefield>]]></xui>
+         <ui_type>datefield</ui_type>
+      </row>
+      <row>
+         <line_number>10</line_number>
+         <name>LABEL6#</name>
+         <xui><![CDATA[<label fill="b" id="LABEL6s.00" nl="1" text="" tooltip="" alt="0"><properties><entry name="id">LABEL6s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text"/></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+      <row>
+         <line_number>11</line_number>
+         <name>LABEL5#</name>
+         <value>Output location</value>
+         <xui><![CDATA[<label fill="b" id="LABEL5s.00" nl="1" text="Output location" tooltip="" alt="0"><properties><entry name="id">LABEL5s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text">Output location</entry></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+      <row>
+         <input_assistent>1</input_assistent>
+         <line_number>2</line_number>
+         <allow_multiselect>1</allow_multiselect>
+         <name>TASK_REPORTS#</name>
+         <reference>VARA.STATIC@LICENSE_REPORTING_TOOL.TASK_BASED_REPORTS</reference>
+         <reference_type>VARA</reference_type>
+         <separator>,</separator>
+         <xui><![CDATA[<text enabled="1" fill="b" focus="0" id="TASK_REPORTSs.00" inputassistance="1" len="" multiline="0" multilineIcon="0" nl="1" separator="," showaspassword="0" text="Task-based Reports" tooltip="" upper="0" alt="1" regex="" required="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">VARA.STATIC@LICENSE_REPORTING_TOOL.TASK_BASED_REPORTS</entry><entry name="text">Task-based Reports</entry><entry name="multiselect">1</entry><entry name="separator">,</entry><entry name="len"/><entry name="quotes"/><entry name="id">TASK_REPORTSs.00</entry><entry name="inputassistance">1</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip"/><entry name="customfield"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="modifiable">1</entry><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="regex"/><entry name="required">0</entry><entry name="initvalue"/><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text>]]></xui>
+         <ui_type>text</ui_type>
+      </row>
+      <row>
+         <input_assistent>1</input_assistent>
+         <line_number>3</line_number>
+         <allow_multiselect>1</allow_multiselect>
+         <name>USAGE_REPORTS#</name>
+         <reference>VARA.STATIC@LICENSE_REPORTING_TOOL.USAGE_BASED_REPORTS</reference>
+         <reference_type>VARA</reference_type>
+         <separator>,</separator>
+         <xui><![CDATA[<text enabled="1" fill="b" focus="0" id="USAGE_REPORTSs.00" inputassistance="1" len="" multiline="0" multilineIcon="0" nl="1" separator="," showaspassword="0" text="Usage-based Reports" tooltip="" upper="0" alt="1" regex="" required="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">VARA.STATIC@LICENSE_REPORTING_TOOL.USAGE_BASED_REPORTS</entry><entry name="text">Usage-based Reports</entry><entry name="multiselect">1</entry><entry name="separator">,</entry><entry name="len"/><entry name="quotes"/><entry name="id">USAGE_REPORTSs.00</entry><entry name="inputassistance">1</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip"/><entry name="customfield"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="modifiable">1</entry><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="regex"/><entry name="required">0</entry><entry name="initvalue"/><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text>]]></xui>
+         <ui_type>text</ui_type>
+      </row>
+      <row>
+         <input_assistent>1</input_assistent>
+         <line_number>4</line_number>
+         <name>GEN_REPORT#</name>
+         <reference>VARA.STATIC@LICENSE_REPORTING_TOOL.GENERAL_REPORTS</reference>
+         <reference_type>VARA</reference_type>
+         <separator>;</separator>
+         <xui><![CDATA[<text enabled="1" fill="b" focus="0" id="GEN_REPORTs.00" inputassistance="1" len="" multiline="0" multilineIcon="0" nl="1" separator=";" showaspassword="0" text="General Report" tooltip="" upper="0" alt="1" regex="" required="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">VARA.STATIC@LICENSE_REPORTING_TOOL.GENERAL_REPORTS</entry><entry name="text">General Report</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">GEN_REPORTs.00</entry><entry name="inputassistance">1</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip"/><entry name="customfield"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="modifiable">1</entry><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="regex"/><entry name="required">0</entry><entry name="initvalue"/><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text>]]></xui>
+         <ui_type>text</ui_type>
+      </row>
+      <row>
+         <line_number>12</line_number>
+         <name>PATH#</name>
+         <reference>UC_DATATYPE_STRING</reference>
+         <reference_type>VARA</reference_type>
+         <separator>;</separator>
+         <xui><![CDATA[<text enabled="1" fill="b" focus="0" id="PATHs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" separator=";" showaspassword="0" text="Path" tooltip="" upper="0" alt="1" regex="" required="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry><entry name="text">Path</entry><entry name="multiselect">0</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">PATHs.00</entry><entry name="inputassistance">0</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip"/><entry name="customfield"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="modifiable">1</entry><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="regex"/><entry name="required">0</entry><entry name="initvalue"/><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text>]]></xui>
+         <ui_type>text</ui_type>
+      </row>
+   </elements>
+</prpt>

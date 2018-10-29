@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <auto_deactivation>A</auto_deactivation>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <ert>2</ert>
+         <platform>WINDOWS</platform>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <max_parallel_action>1</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>JOBS.WIN.FILES.AND.FOLDERS</name>
+         <type>JOBS</type>
+         <inherit_output_filter>N</inherit_output_filter>
+         <queue>CLIENT_QUEUE</queue>
+         <versioning_id>2118357166</versioning_id>
+      </row>
+   </general_attributes>
+   <scripts>
+      <row>
+         <process><![CDATA[:SET &PATH# = GET_VAR(VARA.PATH,"path")
+
+!map network drive
+net use G: &PATH#
+g:
+
+! Get files types
+:SET &HND# = PREP_PROCESS_VAR(VARA.FILE.TYPES)
+:  PROCESS &HND#
+:  SET &TYPE#= GET_PROCESS_LINE(&HND#,1)
+
+!Look for these file types in &PATH#
+:     SET &FILES# = PREP_PROCESS_FILENAME("&$AGENT#","&PATH#\&TYPE#","Y",,,,,'UC_LOGIN=&$LOGIN#')
+:     PROCESS &FILES#
+:       SET &FILE# = GET_PROCESS_LINE(&FILES#)
+
+!Retrieve destination folder from the variable object, create it and move file(s)
+:       SET &DIR# = GET_PROCESS_LINE(&HND#,2)
+@echo off
+if not exist &DIR# mkdir &DIR#
+@echo on
+move &FILE# &DIR#
+:     ENDPROCESS
+:     CLOSE_PROCESS &FILES#
+
+:  ENDPROCESS
+
+
+]]></process>
+      </row>
+      <row>
+         <pre_process><![CDATA[!path used for testing : \\sbb01\apps\SalesForce_ServiceCloud\INC9999999
+
+! :READ &PATH#,,"Path ?"]]></pre_process>
+      </row>
+   </scripts>
+   <job_attributes>
+      <row>
+         <activation_at_runtime>1</activation_at_runtime>
+         <platform>WINDOWS</platform>
+         <agent>NB200003_SO12_WX6_SAA_01</agent>
+         <login>@LOGIN.SAA</login>
+         <job_report_path>2</job_report_path>
+         <win_work_dir>&amp;PATH#</win_work_dir>
+         <win_typ>0</win_typ>
+         <win_view>0</win_view>
+         <win_logon_as_batch>0</win_logon_as_batch>
+         <win_show_at_desktop>0</win_show_at_desktop>
+         <win_report_by_script>0</win_report_by_script>
+         <job_object></job_object>
+         <win_cmd></win_cmd>
+      </row>
+   </job_attributes>
+   <rollback_definitions>
+      <row>
+      </row>
+   </rollback_definitions>
+</jobs>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scri>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <auto_deactivation>A</auto_deactivation>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <ert>1</ert>
+         <last_runtimes>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</last_runtimes>
+         <max_parallel_action>1</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>SCRI@AGENT.RESTARTER</name>
+         <has_prompts>1</has_prompts>
+         <type>SCRI</type>
+         <inherit_output_filter>N</inherit_output_filter>
+         <queue>CLIENT_QUEUE</queue>
+         <versioning_id>304699248</versioning_id>
+      </row>
+   </general_attributes>
+   <scripts>
+      <row>
+         <process><![CDATA[:DEFINE &AGENTS#, string, 5000
+
+!Convert the list of selected agents into an array
+:FILL &AGENTS#[] = STR_SPLIT(&AGENTLIST#,";")
+
+:SET &COUNTER# = 1
+
+!Count the number of entries in the array
+:SET &LEN# = LENGTH(&AGENTS#[], SIZE)
+
+
+
+:WHILE &COUNTER# LE &LEN#
+!!Restart the Agent(s)
+:  PRINT "Agent '&AGENTS#[&COUNTER#]' will be restarted"
+
+:  SET &START# = MODIFY_SYSTEM ("STARTUP", "&AGENTS#[&COUNTER#]")
+
+!Let the user know if the restart has worked
+:IF &START# = "0"
+:  PRINT "Agent '&AGENTS#[&COUNTER#]' was successfully restarted"
+:ELSE
+:     SET &ERRNR# = SYS_LAST_ERR_NR()
+:     SET &ERRINS#  = SYS_LAST_ERR_INS()
+:     SET &MESSAGE# = GET_MSG_TXT(&ERRNR#,&ERRINS#)
+:     P "Restart failed for Agent '&AGENTS#[&COUNTER#]': &MESSAGE#"
+:ENDIF
+
+: SET &COUNTER# = ADD(&COUNTER#, 1)
+!
+:ENDWHILE
+
+]]></process>
+      </row>
+   </scripts>
+   <script_attributes>
+      <row>
+      </row>
+   </script_attributes>
+   <prompt_set_list>
+      <row>
+         <line_number>1</line_number>
+         <prompt_set>PRPT@AGENT.RESTARTER</prompt_set>
+         <display_order>1</display_order>
+      </row>
+   </prompt_set_list>
+   <prompt_set_defaults>
+      <row>
+         <prompt_set_element_number>1</prompt_set_element_number>
+         <prompt_set>PRPT@AGENT.RESTARTER</prompt_set>
+         <variable_name>AGENTLIST#</variable_name>
+      </row>
+      <row>
+         <prompt_set_element_number>1</prompt_set_element_number>
+         <prompt_set>PRPT@AGENT.RESTARTER</prompt_set>
+         <value>UBUNTU01</value>
+         <variable_name>RADIOGROUP1#</variable_name>
+      </row>
+   </prompt_set_defaults>
+   <rollback_definitions>
+      <row>
+      </row>
+   </rollback_definitions>
+</scri>

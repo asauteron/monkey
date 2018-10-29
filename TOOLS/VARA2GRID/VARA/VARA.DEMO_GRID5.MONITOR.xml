@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vara>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <name>VARA.DEMO_GRID5.MONITOR</name>
+         <type>VARA</type>
+         <sub_type>STATIC</sub_type>
+         <versioning_id>-1892864444</versioning_id>
+      </row>
+   </general_attributes>
+   <documentation>
+      <row>
+         <_JGM_Doku><![CDATA[<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><!DOCTYPE Abhängigkeiten [
+<!ELEMENT Abhängigkeiten EMPTY >
+
+<!ELEMENT Ansprechpartner EMPTY >
+
+<!ELEMENT Anforderung.durch EMPTY >
+
+<!ELEMENT Content ( Status, Ansprechpartner, Anforderung.durch, Startbedingung, Inhalt, Variante, Abhängigkeiten, Restart ) >
+
+<!ELEMENT Inhalt EMPTY >
+
+<!ELEMENT Restart EMPTY >
+
+<!ELEMENT Startbedingung EMPTY >
+
+<!ELEMENT Status EMPTY >
+
+<!ELEMENT Variante EMPTY >
+
+]>
+<Content>
+<Status/>
+<Ansprechpartner/>
+<Anforderung.durch/>
+<Startbedingung/>
+<Inhalt/>
+<Variante/>
+<Abhängigkeiten/>
+<Restart/>
+</Content>
+]]></_JGM_Doku>
+      </row>
+      <row>
+         <Docu><![CDATA[Diese Variable wird von diversen Prozessen befüllt und im Monitor visualisiert.
+#### keine manuellen Veränderungen vornehmen ####]]></Docu>
+      </row>
+   </documentation>
+   <variable_definitions>
+      <row>
+         <column_count>5</column_count>
+         <on_not_found>I</on_not_found>
+         <sort_order>0</sort_order>
+         <type>STATIC</type>
+         <data_type>C</data_type>
+         <validity_range>FREI</validity_range>
+      </row>
+   </variable_definitions>
+   <static_values>
+      <row>
+         <client>1980</client>
+         <value1>FR 20180302 07:00:17</value1>
+         <validity_range>FREI</validity_range>
+         <key>AbapErrorInUpdate_date</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>1</value1>
+         <validity_range>FREI</validity_range>
+         <key>AbapErrorInUpdate_status</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1> 2018-03-02 02:50:47</value1>
+         <validity_range>FREI</validity_range>
+         <key>analyze_datum</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>analyze_status</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>3/1/0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0955I</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>3</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0955I-e</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0000000000000004</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0955I-g</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>1</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0955I-w</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0955I-x</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0/0/0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0956I</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0956I-e</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0000000000000000</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0956I-g</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0956I-w</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0956I-x</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0/8/0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0957I</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0957I-e</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0000000000000008</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0957I-g</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>8</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0957I-w</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0957I-x</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0/0/0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0958I</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0958I-e</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0000000000000000</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0958I-g</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0958I-w</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <validity_range>FREI</validity_range>
+         <key>BR0958I-x</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>scd</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_f1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>s</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_f2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>scd</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_f3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>s</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_f4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>00:01:10</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_l1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>00:01:16</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_l2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>00:01:21</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_l3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>00:01:36</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_l4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_r1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_r2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_r3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_r4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Start:02.03.2018 10:02:52 Ende:02.03.2018 10:04:02</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_z1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Start:02.03.2018 10:01:24 Ende:02.03.2018 10:02:40</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_z2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Start:02.03.2018 06:04:14 Ende:02.03.2018 06:05:35</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_z3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Start:02.03.2018 06:02:27 Ende:02.03.2018 06:04:03</value1>
+         <validity_range>FREI</validity_range>
+         <key>brarchive_z4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>online</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_f1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>online</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_f2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>online</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_f3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>online</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_f4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>00:34:56</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_l1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>00:31:01</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_l2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>00:28:22</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_l3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>00:29:16</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_l4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_r1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_r2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_r3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_r4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Start:01.03.2018 20:00:04 Ende:01.03.2018 20:35:00</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_z1</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Start:28.02.2018 20:00:08 Ende:28.02.2018 20:31:09</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_z2</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Start:27.02.2018 20:00:14 Ende:27.02.2018 20:28:36</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_z3</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>Start:26.02.2018 20:04:16 Ende:26.02.2018 20:33:32</value1>
+         <validity_range>FREI</validity_range>
+         <key>brbackup_z4</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>02.03.2018 06:52:02</value1>
+         <validity_range>FREI</validity_range>
+         <key>Checkzeit</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>Errors</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1> 2010-04-11 05.00.10</value1>
+         <validity_range>FREI</validity_range>
+         <key>next_datum</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>999</value1>
+         <validity_range>FREI</validity_range>
+         <key>next_status</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_analyze_table</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>10:13:20</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_analyze_table_lz</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>25.02.2018 02:00:20</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_analyze_table_sst</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>20180225 12:13:40</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_analyze_table_zst</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_Archivkontrolle_rc</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>FR 20180302 07:45:02</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_Archivkontrolle_zst</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_Qrfc_kontrolle_rc</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>FR 20180302 07:45:17</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_Qrfc_kontrolle_zst</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>FR 20180302 07:00:19</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_RPUTX7D0_sst</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>4</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_RPUTX7D0_zahl</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>000</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_smq2_control_rc</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>FR 20180302 07:45:21</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_smq2_control_zst</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>999</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_Trfc_kontrolle_rc</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>FR 20180302 07:45:13</value1>
+         <validity_range>FREI</validity_range>
+         <key>rc_Trfc_kontrolle_zst</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>3</value1>
+         <validity_range>FREI</validity_range>
+         <key>redologbel</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>20180302 10:22:25</value1>
+         <validity_range>FREI</validity_range>
+         <key>redologcheck</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>97</value1>
+         <validity_range>FREI</validity_range>
+         <key>redologfree</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>1</value1>
+         <validity_range>FREI</validity_range>
+         <key>server_aktiv</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>FR 20180302 10:09:45</value1>
+         <validity_range>FREI</validity_range>
+         <key>UsedNumbers_date</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>1</value1>
+         <validity_range>FREI</validity_range>
+         <key>UsedNumbers_status</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>63</value1>
+         <validity_range>FREI</validity_range>
+         <key>UsedNumbers_value</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>012</value1>
+         <validity_range>FREI</validity_range>
+         <key>Warnings</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>0</value1>
+         <validity_range>FREI</validity_range>
+         <key>zyklisch_wert</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>20180301 13:08:49</value1>
+         <validity_range>FREI</validity_range>
+         <key>zyklisch_zeit</key>
+      </row>
+   </static_values>
+</vara>

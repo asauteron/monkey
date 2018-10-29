@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vara>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <name>VARA.STATIC@LICENSE_REPORTING_TOOL.TASK_BASED_REPORTS</name>
+         <type>VARA</type>
+         <sub_type>STATIC</sub_type>
+         <versioning_id>-1766997867</versioning_id>
+      </row>
+   </general_attributes>
+   <variable_definitions>
+      <row>
+         <column_count>5</column_count>
+         <on_not_found>I</on_not_found>
+         <sort_order>0</sort_order>
+         <type>STATIC</type>
+         <data_type>C</data_type>
+         <validity_range>FREI</validity_range>
+      </row>
+   </variable_definitions>
+   <static_values>
+      <row>
+         <client>1980</client>
+         <value1>DailyEvnt</value1>
+         <validity_range>FREI</validity_range>
+         <key>Events activated per day and per client</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>MonthlyEvnt</value1>
+         <validity_range>FREI</validity_range>
+         <key>Events activated per month and per client</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>DefinedEvnt</value1>
+         <validity_range>FREI</validity_range>
+         <key>Events defined per day and per client</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>DailyJobs</value1>
+         <validity_range>FREI</validity_range>
+         <key>Jobs activated per day and per client</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>MonthlyJobs</value1>
+         <validity_range>FREI</validity_range>
+         <key>Jobs activated per month and per client</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>DefinedJobs</value1>
+         <validity_range>FREI</validity_range>
+         <key>Jobs defined per day and per client</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>ActiveClients</value1>
+         <validity_range>FREI</validity_range>
+         <key>List of active Clients</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>DefinedObjects</value1>
+         <validity_range>FREI</validity_range>
+         <key>Objects defined per day and per client</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>MonthlyTasksTotal</value1>
+         <validity_range>FREI</validity_range>
+         <key>Total Tasks activated per month and per client</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>DailyTasksTotal</value1>
+         <validity_range>FREI</validity_range>
+         <key>Total tasks activated per day and per client</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>DailyJobf</value1>
+         <validity_range>FREI</validity_range>
+         <key>Workflows activated per day and per client</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>MonthlyJobf</value1>
+         <validity_range>FREI</validity_range>
+         <key>Workflows activated per month and per client</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>DefinedJobf</value1>
+         <validity_range>FREI</validity_range>
+         <key>Workflows defined per day and per client</key>
+      </row>
+   </static_values>
+</vara>

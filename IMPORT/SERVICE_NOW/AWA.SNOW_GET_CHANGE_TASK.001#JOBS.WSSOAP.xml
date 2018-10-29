@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <auto_deactivation>A</auto_deactivation>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <ert>3</ert>
+         <platform>CIT</platform>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <max_parallel_action>2</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>AWA.SNOW_GET_CHANGE_TASK.001#JOBS.WSSOAP</name>
+         <type>JOBS</type>
+         <has_object_variables>1</has_object_variables>
+         <inherit_output_filter>N</inherit_output_filter>
+         <queue>CLIENT_QUEUE</queue>
+         <description>Get Change Task from ServiceNow</description>
+         <versioning_id>102885322</versioning_id>
+      </row>
+   </general_attributes>
+   <scripts>
+      <row>
+         <process><![CDATA[:SET &LOGLN# = SYS_USER_LNAME()
+:SET &SNOW_ASSIGNED_TO#= &LOGLN#
+:SET &SNOW_APPROVAL# = 'not requested'.
+:SET &SNOW_ASSIGNMENT_GROUP#='Software'
+:SET &SNOW_BUSINESS_SERVICE#='Basic Infrastructure'
+:SET &SNOW_SHORT_DESCRIPTION#='Scanning Operating Systems, As/400 Message Queues, and Databases'
+:SET &SNOW_CATEGORY#='other'
+:SET &SNOW_CHANGE_PRIORITY#='4 - Low'
+:SET &SNOW_IMPACT#='3 - Low'
+:SET &SNOW_INITIAL_STATE#='Open'
+:SET &SNOW_REQUESTOR#=&LOGLN#
+:SET &SNOW_RISK#='Moderate'
+:SET &SNOW_DESCRIPTION#='Automic RunID: &$RUNID# Scanning Operating Systems, As/400 Message Queues, and Databases Service started';'
+:SET &SNOW_TYPE#='Routine'
+:SET &SNOW_PLANNED_END_DATE# = ""
+:SET &SNOW_PLANNED_START_DATE# = ""]]></process>
+      </row>
+   </scripts>
+   <job_attributes>
+      <row>
+         <activation_at_runtime>1</activation_at_runtime>
+         <platform>CIT</platform>
+         <agent>WEBSERVICESOAP01</agent>
+         <type>WEBSERVICESOAP</type>
+         <optional_reports>PLOG</optional_reports>
+         <job_report_path>2</job_report_path>
+         <sub_type>SOAP</sub_type>
+      </row>
+   </job_attributes>
+   <object_variables>
+      <row>
+         <value>3</value>
+         <name>&amp;CHANGE_TASK_STATE#</name>
+      </row>
+   </object_variables>
+   <extended_values>
+      <row>
+         <type>2</type>
+         <name>componentName</name>
+         <value>WebServiceSoap</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>runType</name>
+         <value>SOAP</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>jobHttpHeaders</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>jobSoapHeaders</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>methodName</name>
+         <value>getRecords</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>mtomEnabled</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>overwriteEndpoint</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>printResponseRequestDebug</name>
+         <value>true</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>printSOAPRequest</name>
+         <value>true</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>printSOAPResponse</name>
+         <value>true</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>removeTemplateValues</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>requiredOnly</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>urlEndpoint</name>
+         <value>https://ven01747.service-now.com/change_request.do?SOAP</value>
+      </row>
+      <row>
+         <is_connection>1</is_connection>
+         <type>2</type>
+         <name>webConnection</name>
+         <value>CONN.SOAP.SNOW.CHANGE_TASK.AUTOMIC_SD_TEST_AWI</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_1</name>
+         <value>A&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_2</name>
+         <value>A&lt;ns2:getRecords xmlns:ns2="http://www.service-now.com/change_request"&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_3</name>
+         <value>A    &lt;number&gt;&amp;CHANGE_NUMBER#&lt;/number&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_4</name>
+         <value>A&lt;/ns2:getRecords&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequestClass</name>
+         <value>com.service_now.change_request.GetRecords</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlResponseClass</name>
+         <value>com.service_now.change_request.GetRecordsResponse</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlResponseQName</name>
+         <value>{http://www.service-now.com/change_request}getRecordsResponse</value>
+      </row>
+   </extended_values>
+   <rollback_definitions>
+      <row>
+      </row>
+   </rollback_definitions>
+</jobs>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prpt>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <max_parallel_action>1</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>PRPT@AGENT.RESTARTER</name>
+         <type>PRPT</type>
+         <queue>CLIENT_QUEUE</queue>
+         <versioning_id>2095589042</versioning_id>
+      </row>
+   </general_attributes>
+   <gui_description>
+      <row>
+         <xui><![CDATA[<dialog height="422" icon="PRPT" id="PRPTS" left="279" top="4" width="441"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text=""><properties><entry name="text"/><entry name="modifiable">0</entry></properties></readpanel></dialog>]]></xui>
+      </row>
+   </gui_description>
+   <elements>
+      <row>
+         <line_number>1</line_number>
+         <name>LABEL1#</name>
+         <value>Agent(s) linked to a Service Manager (SMgr) - can be restarted</value>
+         <xui><![CDATA[<label fill="b" id="LABEL1s.00" nl="1" text="Agent(s) linked to a Service Manager (SMgr) - can be restarted" tooltip="" alt="0"><properties><entry name="id">LABEL1s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text">Agent(s) linked to a Service Manager (SMgr) - can be restarted</entry></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+      <row>
+         <input_assistent>1</input_assistent>
+         <line_number>2</line_number>
+         <allow_multiselect>1</allow_multiselect>
+         <name>AGENTLIST#</name>
+         <reference>VARA.SQLI@AGENT.RESTARTER.HOSTS.DOWN.SMGR</reference>
+         <reference_type>VARA</reference_type>
+         <separator>;</separator>
+         <xui><![CDATA[<text alt="1" enabled="1" fill="b" focus="0" id="AGENTLISTs.00" inputassistance="1" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Which Agent(s) would you like to restart ?" tooltip="" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant><properties><entry listparam="C" name="reference" reftype="SQLI">VARA.SQLI@AGENT.RESTARTER.HOSTS.DOWN.SMGR</entry><entry name="text">Which Agent(s) would you like to restart ?</entry><entry name="multiselect">1</entry><entry name="separator">;</entry><entry name="len"/><entry name="quotes"/><entry name="id">AGENTLISTs.00</entry><entry name="inputassistance">1</entry><entry name="enabled">0</entry><entry name="upper">0</entry><entry name="focus">0</entry><entry name="showaspassword">0</entry><entry name="tooltip"/><entry name="customfield"/><entry name="xmlkey"/><entry name="xmlpath"/><entry name="modifiable">1</entry><entry name="multiline">0</entry><entry name="multilineIcon">0</entry><entry name="regex"/><entry name="required">0</entry><entry name="initvalue"/><entry name="onchangereset"/><entry name="resetable">1</entry></properties></text>]]></xui>
+         <ui_type>text</ui_type>
+      </row>
+      <row>
+         <line_number>3</line_number>
+         <name>LABEL3#</name>
+         <value>     </value>
+         <xui><![CDATA[<label fill="b" id="LABEL3s.00" nl="1" text="     " tooltip="" alt="0"><properties><entry name="id">LABEL3s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text">     </entry></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+      <row>
+         <line_number>4</line_number>
+         <name>LABEL4#</name>
+         <value>      </value>
+         <xui><![CDATA[<label fill="b" id="LABEL4s.00" nl="1" text="      " tooltip="" alt="0"><properties><entry name="id">LABEL4s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text">      </entry></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+      <row>
+         <line_number>5</line_number>
+         <name>LABEL2#</name>
+         <value>Agent(s) that cannot be restarted because not linked to a SMgr</value>
+         <xui><![CDATA[<label fill="b" id="LABEL2s.00" nl="1" text="Agent(s) that cannot be restarted because not linked to a SMgr" tooltip="" alt="0"><properties><entry name="id">LABEL2s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text">Agent(s) that cannot be restarted because not linked to a SMgr</entry></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+      <row>
+         <line_number>6</line_number>
+         <name>RADIOGROUP1#</name>
+         <reference>VARA.SQLI@AGENT.RESTARTER.HOSTS.DOWN.NOSMGR</reference>
+         <reference_type>VARA</reference_type>
+         <value>UBUNTU01</value>
+         <xui><![CDATA[<dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="RADIOGROUP1s.00" nl="1" quotes="" text="" tooltip="" required="0"><properties><entry listparam="C" name="reference" reftype="SQLI">VARA.SQLI@AGENT.RESTARTER.HOSTS.DOWN.NOSMGR</entry><entry name="text"/><entry name="quotes"/><entry name="id">RADIOGROUP1s.00</entry><entry name="enabled">0</entry><entry name="focus">0</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="xmlkey"/><entry name="xmlpath"/><entry name="initvalue"/></properties></dynradiogroup>]]></xui>
+         <ui_type>dynradiogroup</ui_type>
+      </row>
+      <row>
+         <line_number>7</line_number>
+         <name>LABEL7#</name>
+         <value>       </value>
+         <xui><![CDATA[<label fill="b" id="LABEL7s.00" nl="1" text="       " tooltip="" alt="0"><properties><entry name="id">LABEL7s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text">       </entry></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+      <row>
+         <line_number>8</line_number>
+         <name>LABEL6#</name>
+         <value>     </value>
+         <xui><![CDATA[<label fill="b" id="LABEL6s.00" nl="1" text="     " tooltip="" alt="0"><properties><entry name="id">LABEL6s.00</entry><entry name="tooltip"/><entry name="customfield"/><entry name="modifiable">1</entry><entry name="text">     </entry></properties></label>]]></xui>
+         <ui_type>label</ui_type>
+      </row>
+   </elements>
+</prpt>

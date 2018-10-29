@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scri>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <auto_deactivation>A</auto_deactivation>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <ert>1</ert>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <max_parallel_action>1</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>SCRI.RUNNR</name>
+         <type>SCRI</type>
+         <inherit_output_filter>N</inherit_output_filter>
+         <queue>CLIENT_QUEUE</queue>
+         <versioning_id>1736906818</versioning_id>
+      </row>
+   </general_attributes>
+   <documentation>
+      <row>
+         <_STRUKTUR><![CDATA[<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?>
+<!DOCTYPE Content [
+<!ELEMENT Content ( #PCDATA | DESCRIPTION | ERRORHANDLING | HINTS_CHARACTERISTICS )* >
+<!ATTLIST Content CREATED_BY CDATA "null" >
+<!ATTLIST Content CUSTOMER_NAME CDATA "null" >
+<!ATTLIST Content CONTACT_SOLUTIONGROUP CDATA "null" >
+<!ATTLIST Content ACTIVATION_MODE CDATA "null" >
+<!ATTLIST Content CONTACTMAIL_DISTRIBUTIONLIST CDATA "null" >
+]>
+<Content ACTIVATION_MODE="Jobplan Event Script:" CONTACTMAIL_DISTRIBUTIONLIST="Mailaddress" CONTACT_SOLUTIONGROUP="Helpdeskgroup" CREATED_BY="" CUSTOMER_NAME="">
+<DESCRIPTION>Description: Describe the Job here.
+
+Runtime: daily / weekly / monthly
+
+
+Staring time: xx:xx
+</DESCRIPTION>
+<ERRORHANDLING>please insert Error hanling description here.</ERRORHANDLING>
+<HINTS_CHARACTERISTICS/>
+</Content>
+]]></_STRUKTUR>
+      </row>
+   </documentation>
+   <scripts>
+      <row>
+         <process><![CDATA[:READ &CHOICE#,"'Report to RunID','RunID to Report'",'Select type of conversion',
+
+:SWITCH &CHOICE#
+!Convert a report name to a RunID
+:  CASE 'REPORT TO RUNID'
+:      READ &REPORT_NAME#,,,,"M"
+:      SET &ALPHA# = MID ("&REPORT_NAME#", 2, 7)
+:      SET &RUNID# = ALPHA2RUNNR ("&ALPHA#")
+:      SET &RUNID# = FORMAT(&RUNID#)
+:      BEGINREAD
+:        PRINT Report : &REPORT_NAME# = RunID &RUNID#
+:      ENDREAD
+
+!Convert a RunID to a report name
+:CASE 'RUNID TO REPORT'
+:      READ &RUNID#,,,,"M"
+:      SET &ALPHA# = RUNNR2ALPHA(&RUNID#)
+:      SET &REPORT_NAME#=STR_CAT("O",&ALPHA#)
+:      SET &REPORT_NAME#=STR_CAT(&REPORT_NAME#,".txt")
+:      BEGINREAD
+:        PRINT RunID : &RUNID# = &REPORT_NAME#
+:      ENDREAD
+: ENDSWITCH
+
+]]></process>
+      </row>
+   </scripts>
+   <script_attributes>
+      <row>
+      </row>
+   </script_attributes>
+   <rollback_definitions>
+      <row>
+      </row>
+   </rollback_definitions>
+</scri>

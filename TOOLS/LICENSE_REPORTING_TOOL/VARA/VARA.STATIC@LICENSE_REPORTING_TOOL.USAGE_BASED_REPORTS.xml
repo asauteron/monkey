@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vara>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <name>VARA.STATIC@LICENSE_REPORTING_TOOL.USAGE_BASED_REPORTS</name>
+         <type>VARA</type>
+         <sub_type>STATIC</sub_type>
+         <versioning_id>975670091</versioning_id>
+      </row>
+   </general_attributes>
+   <variable_definitions>
+      <row>
+         <column_count>5</column_count>
+         <on_not_found>I</on_not_found>
+         <sort_order>0</sort_order>
+         <type>STATIC</type>
+         <data_type>C</data_type>
+         <validity_range>FREI</validity_range>
+      </row>
+   </variable_definitions>
+   <static_values>
+      <row>
+         <client>1980</client>
+         <value1>AgentsDB</value1>
+         <validity_range>FREI</validity_range>
+         <key>DB Agents usage</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>AgentsFTP</value1>
+         <validity_range>FREI</validity_range>
+         <key>FTP Agents usage</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>AgentsJMX</value1>
+         <validity_range>FREI</validity_range>
+         <key>JMX Agents usage</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>AgentsOS</value1>
+         <validity_range>FREI</validity_range>
+         <key>OS Agents usage</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>AgentsRA</value1>
+         <validity_range>FREI</validity_range>
+         <key>RA Agents usage</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>AgentsSAP</value1>
+         <validity_range>FREI</validity_range>
+         <key>SAP Agents usage</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>SAPSystemCopy</value1>
+         <validity_range>FREI</validity_range>
+         <key>SAP System Copy usage</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>SystemAdapters</value1>
+         <validity_range>FREI</validity_range>
+         <key>System Adapters usage</key>
+      </row>
+      <row>
+         <client>1980</client>
+         <value1>AgentsWS</value1>
+         <validity_range>FREI</validity_range>
+         <key>Web Service Agents usage</key>
+      </row>
+   </static_values>
+</vara>

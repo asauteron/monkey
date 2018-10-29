@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<call>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <auto_deactivation>A</auto_deactivation>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <ert>1</ert>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <max_parallel_action>1</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>AWA.MAIL_CLOSE_SNOW.001#CALL</name>
+         <type>CALL</type>
+         <inherit_output_filter>N</inherit_output_filter>
+         <queue>CLIENT_QUEUE</queue>
+         <sub_type>3</sub_type>
+         <description>Email Notification Close Service Now Change</description>
+         <versioning_id>99270756</versioning_id>
+      </row>
+   </general_attributes>
+   <scripts>
+      <row>
+         <process><![CDATA[:set &userid# = SYS_USER_NAME
+:set &dep# = SYS_USER_DEP
+:ADD_ATT OPERATOR, '&userid#/&dep#']]></process>
+      </row>
+   </scripts>
+   <notification_attributes>
+      <row>
+         <activation_at_runtime>1</activation_at_runtime>
+         <priority>1</priority>
+         <subject>Status Update - Request Closed</subject>
+         <content><![CDATA[Dear Automic User,
+
+Your service request has been completed and you can review the ServiceNow Change Ticket (&CHANGE_NUMBER#) here:
+https://ven01747.service-now.com/nav_to.do?uri=change_request.do?sys_id=&CHANGE_SYS_ID#
+
+Have a great day
+
+Best regards,
+Your Automic Team]]></content>
+      </row>
+   </notification_attributes>
+   <rollback_definitions>
+      <row>
+      </row>
+   </rollback_definitions>
+</call>

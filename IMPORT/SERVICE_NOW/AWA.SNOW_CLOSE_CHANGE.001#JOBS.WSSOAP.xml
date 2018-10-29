@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <auto_deactivation>A</auto_deactivation>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <ert>2</ert>
+         <platform>CIT</platform>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <max_parallel_action>2</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>AWA.SNOW_CLOSE_CHANGE.001#JOBS.WSSOAP</name>
+         <type>JOBS</type>
+         <has_object_variables>1</has_object_variables>
+         <inherit_output_filter>N</inherit_output_filter>
+         <queue>CLIENT_QUEUE</queue>
+         <description>Close Change in ServiceNow</description>
+         <versioning_id>-450589844</versioning_id>
+      </row>
+   </general_attributes>
+   <scripts>
+      <row>
+         <process><![CDATA[:SET &LOGLN# = SYS_USER_LNAME()
+:SET &SNOW_APPROVAL# = 'not requested'.
+:SET &SNOW_ASSIGNED_TO#= &LOGLN#
+:SET &SNOW_ASSIGNMENT_GROUP#='PSL_ARA DEMO USERS'
+:SET &SNOW_BUSINESS_SERVICE#='Basic Infrastructure'
+:SET &SNOW_CATEGORY#='other'
+:SET &SNOW_CHANGE_PRIORITY#='4 - Low'
+:SET &SNOW_DESCRIPTION#='Automic RunID: &$RUNID#  Environment: Prod  Location EU/London;'
+:SET &SNOW_IMPACT#='3 - Low'
+:SET &SNOW_INITIAL_STATE#='Open'
+:SET &SNOW_REQUESTOR#=&LOGLN#
+:SET &SNOW_RISK#='Moderate'
+:SET &SNOW_SHORT_DESCRIPTION#='Provision Server with Trading App'
+:SET &SNOW_TYPE#='Routine'
+:SET &SNOW_PLANNED_END_DATE# = ""
+:SET &SNOW_PLANNED_START_DATE# = ""]]></process>
+      </row>
+   </scripts>
+   <job_attributes>
+      <row>
+         <activation_at_runtime>1</activation_at_runtime>
+         <platform>CIT</platform>
+         <agent>WEBSERVICESOAP01</agent>
+         <type>WEBSERVICESOAP</type>
+         <optional_reports>PLOG</optional_reports>
+         <job_report_path>2</job_report_path>
+         <sub_type>SOAP</sub_type>
+      </row>
+   </job_attributes>
+   <object_variables>
+      <row>
+         <value>Closed by Automic</value>
+         <name>&amp;CLOSE_NOTE#</name>
+      </row>
+      <row>
+         <value>Server provisioned: IP Address: &amp;IP_ADDR#, Location: &amp;PS_LOCATION#</value>
+         <name>&amp;COMMENT#</name>
+      </row>
+      <row>
+         <value>145.53.135.222</value>
+         <name>&amp;IP_ADDR#</name>
+      </row>
+      <row>
+         <value>Netherlands</value>
+         <name>&amp;PS_LOCATION#</name>
+      </row>
+      <row>
+         <value>3</value>
+         <name>&amp;UPDATE_STATE#</name>
+      </row>
+      <row>
+         <value>Server provisioned: IP Address: &amp;IP_ADDR#, Location: &amp;PS_LOCATION#</value>
+         <name>&amp;WORKNOTE#</name>
+      </row>
+   </object_variables>
+   <extended_values>
+      <row>
+         <type>2</type>
+         <name>componentName</name>
+         <value>WebServiceSoap</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>runType</name>
+         <value>SOAP</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>jobHttpHeaders</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>jobSoapHeaders</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>methodName</name>
+         <value>update</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>mtomEnabled</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>overwriteEndpoint</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>printResponseRequestDebug</name>
+         <value>true</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>printSOAPRequest</name>
+         <value>true</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>printSOAPResponse</name>
+         <value>true</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>removeTemplateValues</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>requiredOnly</name>
+         <value>false</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>urlEndpoint</name>
+         <value>https://ven01747.service-now.com/change_request.do?SOAP</value>
+      </row>
+      <row>
+         <is_connection>1</is_connection>
+         <type>2</type>
+         <name>webConnection</name>
+         <value>CONN.SOAP.SNOW.CHANGE_TASK.AUTOMIC_SD_TEST_AWI</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_1</name>
+         <value>A&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_10</name>
+         <value>A       &lt;company&gt;Automic&lt;/company&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_11</name>
+         <value>A    &lt;description&gt;&amp;SNOW_DESCRIPTION#&lt;/description&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_12</name>
+         <value>A    &lt;due_date&gt;&amp;SNOW_PLANNED_END_DATE#&lt;/due_date&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_13</name>
+         <value>A    &lt;end_date&gt;&amp;SNOW_PLANNED_END_DATE#&lt;/end_date&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_14</name>
+         <value>A    &lt;expected_start&gt;&amp;SNOW_PLANNED_START_DATE#&lt;/expected_start&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_15</name>
+         <value>A    &lt;impact&gt;&amp;SNOW_IMPACT#&lt;/impact&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_16</name>
+         <value>A    &lt;opened_by&gt;&amp;SNOW_REQUESTOR#&lt;/opened_by&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_17</name>
+         <value>A    &lt;priority&gt;&amp;SNOW_CHANGE_PRIORITY#&lt;/priority&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_18</name>
+         <value>A    &lt;requested_by&gt;&amp;SNOW_REQUESTOR#&lt;/requested_by&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_19</name>
+         <value>A    &lt;risk&gt;&amp;SNOW_RISK#&lt;/risk&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_2</name>
+         <value>A&lt;ns2:update xmlns:ns2="http://www.service-now.com/change_request"&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_20</name>
+         <value>A    &lt;short_description&gt;&amp;SNOW_SHORT_DESCRIPTION#&lt;/short_description&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_21</name>
+         <value>A    &lt;start_date&gt;&amp;SNOW_PLANNED_START_DATE#&lt;/start_date&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_22</name>
+         <value>A    &lt;state&gt;&amp;SNOW_INITIAL_STATE#&lt;/state&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_23</name>
+         <value>A    &lt;type&gt;&amp;SNOW_TYPE#&lt;/type&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_24</name>
+         <value>A       &lt;state&gt;&amp;UPDATE_STATE#&lt;/state&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_25</name>
+         <value>A       &lt;work_notes&gt;&amp;WORKNOTE#&lt;/work_notes&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_26</name>
+         <value>A   &lt;/ns2:update&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_27</name>
+         <value>A</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_28</name>
+         <value>A</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_3</name>
+         <value>A &lt;sys_id&gt;&amp;sys_id#&lt;/sys_id&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_4</name>
+         <value>A        &lt;comments&gt;&amp;COMMENT#&lt;/comments&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_5</name>
+         <value>A            &lt;approval&gt;&amp;SNOW_APPROVAL#&lt;/approval&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_6</name>
+         <value>A    &lt;assigned_to&gt;&amp;SNOW_ASSIGNED_TO#&lt;/assigned_to&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_7</name>
+         <value>A    &lt;assignment_group&gt;&amp;SNOW_ASSIGNMENT_GROUP#&lt;/assignment_group&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_8</name>
+         <value>A    &lt;business_service&gt;&amp;SNOW_BUSINESS_SERVICE#=&lt;/business_service&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequest_9</name>
+         <value>A    &lt;category&gt;&amp;SNOW_CATEGORY#&lt;/category&gt;</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlRequestClass</name>
+         <value>com.service_now.change_request.Update</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlResponseClass</name>
+         <value>com.service_now.change_request.UpdateResponse</value>
+      </row>
+      <row>
+         <type>2</type>
+         <name>xmlResponseQName</name>
+         <value>{http://www.service-now.com/change_request}updateResponse</value>
+      </row>
+   </extended_values>
+   <rollback_definitions>
+      <row>
+      </row>
+   </rollback_definitions>
+</jobs>

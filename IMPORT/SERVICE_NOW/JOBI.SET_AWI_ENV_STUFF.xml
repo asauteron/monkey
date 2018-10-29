@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobi>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <name>JOBI.SET_AWI_ENV_STUFF</name>
+         <type>JOBI</type>
+         <description>set scripts vars to use when creating emails etc, awi hostname, port</description>
+         <versioning_id>1793643694</versioning_id>
+      </row>
+   </general_attributes>
+   <scripts>
+      <row>
+         <process><![CDATA[:SET &awiPort# = GET_SCRIPT_VAR("awiPort#")
+:IF &awiPort# <> ""
+:  PRINT "JOB: setting AWIPort to &awiPort#"
+:ELSE
+:  PRINT "JOB: setting AWIPort to default 8080"
+:  set &awiPort# = "8080"
+:endif
+
+
+:SET &awiHostname# = GET_SCRIPT_VAR("awiHostname#")
+:IF &awiHostname# <> ""
+:  PRINT "JOB: setting awiHostname to &awiHostname#"
+:ELSE
+:  PRINT "JOB: setting awiHostname to default localhost"
+:  set &awiPort# = "localhost"
+:endif]]></process>
+      </row>
+   </scripts>
+</jobi>

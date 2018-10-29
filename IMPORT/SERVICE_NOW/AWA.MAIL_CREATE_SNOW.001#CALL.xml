@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<call>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <auto_deactivation>A</auto_deactivation>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <ert>1</ert>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <max_parallel_action>1</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>AWA.MAIL_CREATE_SNOW.001#CALL</name>
+         <type>CALL</type>
+         <inherit_output_filter>N</inherit_output_filter>
+         <queue>CLIENT_QUEUE</queue>
+         <sub_type>3</sub_type>
+         <description>EMAIL | Send Notification</description>
+         <versioning_id>-1919121386</versioning_id>
+      </row>
+   </general_attributes>
+   <scripts>
+      <row>
+         <process><![CDATA[:set &userid# = SYS_USER_NAME
+:set &dep# = SYS_USER_DEP
+:ADD_ATT OPERATOR, '&userid#/&dep#'
+
+
+:inc JOBI.SET_AWI_ENV_STUFF
+
+
+
+]]></process>
+      </row>
+   </scripts>
+   <notification_attributes>
+      <row>
+         <activation_at_runtime>1</activation_at_runtime>
+         <priority>1</priority>
+         <subject>Status Update - Request Created</subject>
+         <content><![CDATA[Dear Automic User,
+
+Your service request was approved and provisioning started. You can follow the current state of the process at:
+http://&awiHostname#:&awiPort#/awi/#pm/monitor/&$ACTIVATOR_RUNID#&showType=GRAPHICAL
+
+We created a ServiceNow Change Ticket (&CHANGE_NUMBER#) which you can follow here:
+https://ven01747.service-now.com/nav_to.do?uri=change_request.do?sys_id=&CHANGE_SYS_ID#
+
+Have a great day
+
+Best regards,
+Your Automic Team]]></content>
+      </row>
+   </notification_attributes>
+   <rollback_definitions>
+      <row>
+      </row>
+   </rollback_definitions>
+</call>

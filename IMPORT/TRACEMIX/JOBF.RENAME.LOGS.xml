@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobf>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <auto_deactivation>A</auto_deactivation>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <platform>WINDOWS</platform>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <max_parallel_action>1</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>JOBF.RENAME.LOGS</name>
+         <type>JOBF</type>
+         <inherit_output_filter>N</inherit_output_filter>
+         <queue>CLIENT_QUEUE</queue>
+         <versioning_id>-453295858</versioning_id>
+      </row>
+   </general_attributes>
+   <file_transfer_attributes>
+      <row>
+         <cancel_on_first_error>1</cancel_on_first_error>
+         <destination_path>C:\audit\test\WP*.txt</destination_path>
+         <source_path>C:\audit\WPsrv_log_*.txt</source_path>
+         <destination_agent>NB0005040_WS121_SAA_X86_02</destination_agent>
+         <source_agent>NB0005040_WS121_SAA_X86_01</source_agent>
+         <destination_login>@LOGIN.SAA</destination_login>
+         <source_login>@LOGIN.SAA</source_login>
+         <max_parallel_ft>1</max_parallel_ft>
+         <allow_overwrite>0</allow_overwrite>
+         <repeat_type>R</repeat_type>
+         <additional_attributes>1=''2=''</additional_attributes>
+         <include_sub_directories>1</include_sub_directories>
+         <text_type>0</text_type>
+         <use_wild_cards>1</use_wild_cards>
+      </row>
+   </file_transfer_attributes>
+   <rollback_definitions>
+      <row>
+      </row>
+   </rollback_definitions>
+</jobf>
