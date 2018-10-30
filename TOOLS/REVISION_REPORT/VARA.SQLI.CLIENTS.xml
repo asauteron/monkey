@@ -10,10 +10,10 @@
          <minimum_ae_version>11.2</minimum_ae_version>
          <child_flags>00000000000000000000000000000000</child_flags>
          <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
-         <name>VARA.SQLI@REVISION.REPORT.CLIENT.LIST</name>
+         <name>VARA.SQLI.CLIENTS</name>
          <type>VARA</type>
          <sub_type>SQLI</sub_type>
-         <versioning_id>826796014</versioning_id>
+         <versioning_id>-371695725</versioning_id>
       </row>
    </general_attributes>
    <variable_definitions>
@@ -23,8 +23,8 @@
          <sort_order>0</sort_order>
          <type>SQLI</type>
          <sql>SELECT DISTINCT OH_CLIENT FROM OH ORDER BY OH_Client</sql>
-         <sql_db2>--SELECT DISTINCT OH_CLIENT FROM OH ORDER BY OH_Client</sql_db2>
-         <sql_oracle>--SELECT DISTINCT OH_CLIENT FROM OH ORDER BY OH_Client</sql_oracle>
+         <sql_db2>SELECT DISTINCT OH_CLIENT FROM OH ORDER BY OH_Client</sql_db2>
+         <sql_oracle>SELECT DISTINCT OH_CLIENT FROM OH ORDER BY OH_Client</sql_oracle>
          <ovd_sql_postgres>SELECT DISTINCT OH_CLIENT FROM OH ORDER BY OH_Client</ovd_sql_postgres>
          <data_type>C</data_type>
          <validity_range>FREI</validity_range>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <auto_deactivation>A</auto_deactivation>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <ert>13</ert>
+         <platform>WINDOWS</platform>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <max_parallel_action>1</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>EXTRACT.DATA</name>
+         <has_prompts>1</has_prompts>
+         <type>JOBS</type>
+         <has_object_variables>1</has_object_variables>
+         <inherit_output_filter>N</inherit_output_filter>
+         <queue>CLIENT_QUEUE</queue>
+         <versioning_id>16678885</versioning_id>
+      </row>
+   </general_attributes>
+   <scripts>
+      <row>
+         <process><![CDATA[!check if the path to utilities ends with a trailing "\"
+:SET &CHECK1# = STR_ENDS_WITH (&UTILITY#, "\")
+! If not, add the missing backslash
+:IF &CHECK1# EQ "N"
+:  SET &UTILITY_PATH# = STR_CAT(&UTILITY#, "\")
+:ELSE
+:  SET &UTILITY_PATH# = &UTILITY#
+:ENDIF
+
+
+!check if the report location ends with a trailing "\"
+:SET &CHECK2# = STR_ENDS_WITH (&REPORT#, "\")
+! If not, add the missing backslash
+:IF &CHECK2# EQ "N"
+:  SET &REPORT_PATH# = STR_CAT(&REPORT#, "\")
+:ELSE
+:  SET &REPORT_PATH# = &REPORT#
+:ENDIF
+
+!Verify if the path exists
+
+
+
+
+!Convert date format to YYYYMMDD so it can be used as a parameter of the revision report
+:SET &START# = CONV_DATE("YYMMDD:&STARTDATE#", "YYYYMMDD")
+:SET &END# = CONV_DATE("YYMMDD:&ENDDATE#", "YYYYMMDD")
+
+!convert time format so it can be used as an input parameter (basically remove the colon)
+:SET &TS1_1# = STR_CUT(&TIME1#,1,2)
+:SET &TS1_2# = STR_CUT(&TIME1#,4,2)
+:SET &TS2_1# = STR_CUT(&TIME2#,1,2)
+:SET &TS2_2# = STR_CUT(&TIME2#,4,2)
+
+
+!Prepare the loop : initiate a counter and get the number of selected clients
+:SET &COUNT# = 1
+:SET &LENGTH# = LENGTH(&CLIENTS#[])
+
+
+!For every client, write a revision report
+:WHILE &COUNT# LE &LENGTH#
+:  SET &CLNUM# = &CLIENTS#[&COUNT#]
+:  SET &CLNUM# = FORMAT(&CLNUM#,"0000")
+    &UTILITY_PATH#UCYBDBRR -B -C&CLNUM# -F&AUDIT# -D1&START#&TS1_1#&TS1_2#00 -D2&END#&TS2_1#&TS2_2#00 -O&REPORT_PATH#C&CLNUM#_changes_between_&START#_&TS1_1#&TS1_2#_and_&END#_&TS2_1#&TS2_2#.&FORMAT#
+:  SET &COUNT# = &COUNT# + 1
+:ENDWHILE
+]]></process>
+      </row>
+   </scripts>
+   <job_attributes>
+      <row>
+         <platform>WINDOWS</platform>
+         <agent>WIN01</agent>
+         <login>LOGIN.SAUAN03</login>
+         <job_report_path>2</job_report_path>
+         <win_work_dir>c:\</win_work_dir>
+         <win_typ>0</win_typ>
+         <win_view>0</win_view>
+         <win_logon_as_batch>0</win_logon_as_batch>
+         <win_show_at_desktop>0</win_show_at_desktop>
+         <win_report_by_script>0</win_report_by_script>
+         <job_object></job_object>
+         <win_cmd></win_cmd>
+      </row>
+   </job_attributes>
+   <object_variables>
+      <row>
+         <value>C:\AWA122\Automation.Platform\Utility\bin</value>
+         <name>&amp;UTILITY#</name>
+      </row>
+   </object_variables>
+   <prompt_set_list>
+      <row>
+         <line_number>1</line_number>
+         <prompt_set>PRPT@REVISION_REPORT</prompt_set>
+         <display_order>1</display_order>
+      </row>
+   </prompt_set_list>
+   <prompt_set_defaults>
+      <row>
+         <prompt_set_element_number>1</prompt_set_element_number>
+         <prompt_set>PRPT@REVISION_REPORT</prompt_set>
+         <variable_name>AUDIT#</variable_name>
+      </row>
+      <row>
+         <prompt_set_element_number>1</prompt_set_element_number>
+         <prompt_set>PRPT@REVISION_REPORT</prompt_set>
+         <value>2018-01-01</value>
+         <variable_name>STARTDATE#</variable_name>
+      </row>
+      <row>
+         <prompt_set_element_number>1</prompt_set_element_number>
+         <prompt_set>PRPT@REVISION_REPORT</prompt_set>
+         <value>00:00</value>
+         <variable_name>TIME1#</variable_name>
+      </row>
+      <row>
+         <prompt_set_element_number>1</prompt_set_element_number>
+         <prompt_set>PRPT@REVISION_REPORT</prompt_set>
+         <value>2018-06-30</value>
+         <variable_name>ENDDATE#</variable_name>
+      </row>
+      <row>
+         <prompt_set_element_number>1</prompt_set_element_number>
+         <prompt_set>PRPT@REVISION_REPORT</prompt_set>
+         <value>00:00</value>
+         <variable_name>TIME2#</variable_name>
+      </row>
+      <row>
+         <has_list>1</has_list>
+         <prompt_set_element_number>1</prompt_set_element_number>
+         <prompt_set>PRPT@REVISION_REPORT</prompt_set>
+         <variable_name>CLIENTS#</variable_name>
+      </row>
+      <row>
+         <prompt_set_element_number>1</prompt_set_element_number>
+         <prompt_set>PRPT@REVISION_REPORT</prompt_set>
+         <variable_name>REPORT#</variable_name>
+      </row>
+      <row>
+         <prompt_set_element_number>1</prompt_set_element_number>
+         <prompt_set>PRPT@REVISION_REPORT</prompt_set>
+         <variable_name>FORMAT#</variable_name>
+      </row>
+   </prompt_set_defaults>
+   <rollback_definitions>
+      <row>
+      </row>
+   </rollback_definitions>
+</jobs>
