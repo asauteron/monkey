@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <auto_deactivation>A</auto_deactivation>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <ert>1</ert>
+         <platform>WINDOWS</platform>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <max_parallel_action>1</max_parallel_action>
+         <mrt_time>000000</mrt_time>
+         <name>JOBS.PS@AWA_REST_API_IMP</name>
+         <type>JOBS</type>
+         <inherit_output_filter>N</inherit_output_filter>
+         <queue>CLIENT_QUEUE</queue>
+         <versioning_id>-1958962873</versioning_id>
+      </row>
+   </general_attributes>
+   <scripts>
+      <row>
+         <process><![CDATA[!-------------------[IMPORT]---------------
+
+:BEGIN_EXT_INT POWERSHELL
+!
+!use the job messenger to decrypt the password and store it into a variable
+
+$SecurePassword = (&UC_JOBMD CMD="echo &DEST_PW#")
+
+echo $SecurePassword
+
+$base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f "&DEST_USER#","$SecurePassword")))
+
+$json = Get-Content "&LOCATION#\export_&OBJECT#.json" -Raw
+
+irm -uri "http://&DEST_SRV#:&DEST_JCP#/ae/api/v1/&CLIENT#/objects"  -Method POST -Headers @{"Authorization"="Basic $base64AuthInfo"} -Body $json -ContentType "application/json"
+
+:END_EXT_INT]]></process>
+      </row>
+   </scripts>
+   <job_attributes>
+      <row>
+         <platform>WINDOWS</platform>
+         <agent>WIN01</agent>
+         <login>LOGIN.SAUAN03</login>
+         <job_report_path>2</job_report_path>
+         <win_work_dir>c:\</win_work_dir>
+         <win_typ>0</win_typ>
+         <win_view>0</win_view>
+         <win_logon_as_batch>0</win_logon_as_batch>
+         <win_show_at_desktop>0</win_show_at_desktop>
+         <win_report_by_script>0</win_report_by_script>
+         <job_object></job_object>
+         <win_cmd></win_cmd>
+      </row>
+   </job_attributes>
+   <rollback_definitions>
+      <row>
+      </row>
+   </rollback_definitions>
+</jobs>
