@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs>
+   <metadata>
+      <row>
+         <version>12.2.0</version>
+      </row>
+   </metadata>
+   <general_attributes>
+      <row>
+         <minimum_ae_version>11.2</minimum_ae_version>
+         <auto_deactivation>A</auto_deactivation>
+         <child_flags>00000000000000000000000000000000</child_flags>
+         <platform>JMX</platform>
+         <last_runtimes>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</last_runtimes>
+         <mrt_time>000000</mrt_time>
+         <name>JOBS.JMX.CONNECTION.TEST</name>
+         <type>JOBS</type>
+         <inherit_output_filter>N</inherit_output_filter>
+         <queue>CLIENT_QUEUE</queue>
+         <versioning_id>277274026</versioning_id>
+      </row>
+   </general_attributes>
+   <job_attributes>
+      <row>
+         <platform>JMX</platform>
+         <agent><![CDATA[<JMX>]]></agent>
+         <job_report_path>2</job_report_path>
+         <priority>0</priority>
+         <m>7</m>
+         <E>0</E>
+         <initial_context_factory></initial_context_factory>
+         <server_url>service:jmx:rmi:///jndi/rmi://localhost:9004/jmxrmi</server_url>
+         <agent_id></agent_id>
+         <jndi>jmx</jndi>
+      </row>
+   </job_attributes>
+</jobs>
